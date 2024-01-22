@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const letterInputs = document.querySelectorAll('.blank input');
     const correctAnswer = "audacity of hope"; // Correct answer set here
 
-    function getCollectedLetters() {
+     function getCollectedLetters() {
         return Array.from(letterInputs).map(input => input.value || '_').join('');
     }
 
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Array.from(unscrambleInputs).forEach(input => {
         input.addEventListener('input', updateCollectedLetters);
     });
+
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
